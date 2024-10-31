@@ -1,3 +1,3 @@
-#E155 Lab 1
+#E155 Lab 7
 
-This repository includes code to verify the proper assembly of the Microp development board as well as proper function of the MCU AND FPGA.
+This repository includes code to simulate AES using both the FPGA and MCU. 

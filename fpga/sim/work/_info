@@ -1,0 +1,524 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/mdesomma/Documents/lab3/fpga/sim
+vaddRoundKey
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1730244390
+!i10b 1
+!s100 a_>Hh_co3T<QVeLc0a=S32
+IVHP9^QNH8;VP1zo?A[@C41
+S1
+Z2 dC:/Users/mdesomma/Documents/e155-lab7/fpga/sim
+Z3 w1730239070
+Z4 8C:/Users/mdesomma/Documents/e155-lab7/fpga/src/aes_starter.sv
+Z5 FC:/Users/mdesomma/Documents/e155-lab7/fpga/src/aes_starter.sv
+!i122 126
+L0 346 4
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OT;L;2021.4;73
+r1
+!s85 0
+31
+Z8 !s108 1730244390.000000
+Z9 !s107 C:/Users/mdesomma/Documents/e155-lab7/fpga/src/aes_starter.sv|
+Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/mdesomma/Documents/e155-lab7/fpga/src/aes_starter.sv|
+!s101 -O0
+!i113 1
+Z11 o-work work -sv -O0
+Z12 tCvgOpt 0
+nadd@round@key
+vaes
+R0
+Z13 !s125 LATTICE_CONN
+R1
+!i10b 1
+!s100 bCM0cWEZbU4Lk@IZheAHC1
+Ia<H^CFAb8V0HVFo6J<C400
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 6 12
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vaes_core
+R0
+R1
+!i10b 1
+!s100 `J<L_E`z>0:W0CiVzn;3S2
+INf<M<eNG_E=1I_6Cz2:A22
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 75 75
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vaes_spi
+R0
+R1
+!i10b 1
+!s100 <Li9?55zzR@I>CcR;93nH1
+IJEX>oE[dni9J>JCK]Dg450
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 26 29
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vaesTB
+R0
+!s110 1730073837
+!i10b 1
+!s100 44Oi`>0n1B6H@g=VICl2?3
+In[ik?KU3oBl`TOa<>o27A2
+S1
+R2
+w1730073824
+Z14 8C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aesTB.sv
+Z15 FC:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aesTB.sv
+!i122 7
+L0 6 13
+R6
+R7
+r1
+!s85 0
+31
+!s108 1730073837.000000
+Z16 !s107 C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aesTB.sv|
+Z17 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aesTB.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+naes@t@b
+vcoreTB
+R0
+R1
+!i10b 1
+!s100 NdIDdCZPVDPAcQBmUoWjH0
+IS>Kz>bz?Z3:1P2]SUJCiK0
+S1
+R2
+Z18 w1730184605
+R14
+R15
+!i122 127
+L0 6 23
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+ncore@t@b
+vgaloismult
+R0
+R1
+!i10b 1
+!s100 MV^?n3LCIIPZmV@C=D;W41
+ImU6f_U4m>Hg81`2LkImi61
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 224 8
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vgenerateNextWords
+R0
+R1
+!i10b 1
+!s100 1<hQh>ViXnE`4CCH1n>QY3
+Ik:7TaN7`9mKUk<3FZoBe=0
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 295 13
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+ngenerate@next@words
+vkeyExpansionTB
+R0
+R1
+!i10b 1
+!s100 Z?Dk@g6W:JR1<CmAC3e^33
+I3D1XeFeMMIh:[5L=`P:I^1
+S1
+R2
+R18
+R14
+R15
+!i122 127
+L0 67 20
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+nkey@expansion@t@b
+vmixcolumn
+R0
+R1
+!i10b 1
+!s100 dT`Y0U]G^7=dl268FaOVV0
+I@;h8P>MGk[@MzJ8lXX>]03
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 197 19
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vmixcolumns
+R0
+R13
+R1
+!i10b 1
+!s100 K6X]zVJGFA]hBPh4d8bWb1
+INV<24Og]171?2S6ePZIVH1
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 181 8
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+voneWord
+R0
+R1
+!i10b 1
+!s100 FRDWhQklLJl[a]TR<n@di1
+IB:6mXGA3M0<fnB_FO=d;j0
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 309 32
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+none@word
+voneWordTB
+R0
+R1
+!i10b 1
+!s100 0jCd`ngzVz74Qa7jQ<@2m0
+I:CzakOaZoH1ZC:_U<R5@A1
+S1
+R2
+R18
+R14
+R15
+!i122 127
+L0 88 18
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+none@word@t@b
+vsbox_sync
+R0
+R1
+!i10b 1
+!s100 2[iRQgRIZ;DDKKRzn^Sm=1
+IbA36i<GMQLM1=26gdl`PO3
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 157 16
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+vshiftRows
+R0
+R1
+!i10b 1
+!s100 z6JaFFK=hi2Nh45n70>=n1
+Ia4iN>ISOB1j`>=ViCER0m1
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 238 26
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+nshift@rows
+vshiftRowsTB
+R0
+R1
+!i10b 1
+!s100 bDbd0hG4IJaBN8g2X6;PM1
+IaWgCAJ>9Jmb@`6GAZ<Q^k1
+S1
+R2
+R18
+R14
+R15
+!i122 127
+L0 30 14
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+nshift@rows@t@b
+vsubByte
+R0
+R1
+!i10b 1
+!s100 cSV<ao5M@z[nS52CEU;B41
+IDU>k=:7A?ezZzjN2AzAKG0
+S1
+R2
+R3
+R4
+R5
+!i122 126
+L0 269 25
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R11
+R12
+nsub@byte
+vsubByteTB
+R0
+R1
+!i10b 1
+!s100 Y^EWj^5DiTKic@L5eLKjC0
+IUn5>i946lg3OjhbkO?V>]0
+S1
+R2
+R18
+R14
+R15
+!i122 127
+L0 45 21
+R6
+R7
+r1
+!s85 0
+31
+R8
+R16
+R17
+!s101 -O0
+!i113 1
+R11
+R12
+nsub@byte@t@b
+vtestbench_aes_core
+R0
+R1
+!i10b 1
+!s100 aD<7_IY:C]X`2c6i`[Pa<0
+IIU1EZ5NG]IDhj]iIN?ePg0
+S1
+R2
+Z19 w1729979250
+8C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_core_tb.sv
+FC:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_core_tb.sv
+!i122 129
+L0 11 42
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_core_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_core_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
+vtestbench_aes_spi
+R0
+R1
+!i10b 1
+!s100 PcFFUBNWE;M`BnY_zj0Uj2
+IGkbM?WKWeP74P;OC_i@4i3
+S1
+R2
+R19
+8C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_spi_tb.sv
+FC:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_spi_tb.sv
+!i122 128
+L0 8 73
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_spi_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/mdesomma/Documents/e155-lab7/fpga/sim/aes_spi_tb.sv|
+!s101 -O0
+!i113 1
+R11
+R12
