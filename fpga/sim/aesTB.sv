@@ -3,6 +3,7 @@
 // mdesomma@g.hmc.edu
 // 10/27/2024
 
+// aes_core tester
 module coreTB();
 logic clk, load, done;
 logic [127:0] key, plaintext, cyphertext;
@@ -15,6 +16,7 @@ always
      clk = 0; #5;
    end
 
+// allows you to see waveforms when ciphering. 
 initial
  begin
 	load = 1;
@@ -24,24 +26,24 @@ initial
 	plaintext = 128'h3243f6a8885a308d313198a2e0370734;
 	#50;
  end
-
 endmodule
 
+// shiftRows tester
 module shiftRowsTB();
 logic [127:0] a;
 logic [127:0] y;
 
 shiftRows dut(.a(a), .y(y));
 
+// feed in an input to shiftRows and monitor output
 initial
  begin
 	a = 128'hd42711aee0bf98f1b8b45de51e415230;
 	#50;
  end
-
-
 endmodule
 
+// subByte tester
 module subByteTB();
 logic [127:0] a;
 logic clk;
@@ -56,6 +58,7 @@ subByte dut(.a(a), .clk(clk), .y(y));
      clk = 0; #5;
    end
 
+// feed in an input and visualize output in waveforms
 initial
  begin
 	a = 128'h193de3bea0f4e22b9ac68d2ae9f84808;
@@ -64,6 +67,7 @@ initial
 
 endmodule
 
+// keyExpansion test
 module keyExpansionTB();
 	logic clk;
 	logic [127:0] currentWords, nextWords;
@@ -77,6 +81,7 @@ module keyExpansionTB();
      		clk = 0; #5;
 	 end
 	
+	// input a currentKey and a rcon and look at waveform output
 	initial
 	 begin
 	  currentWords = 128'h2b7e151628aed2a6abf7158809cf4f3c;
@@ -85,6 +90,7 @@ module keyExpansionTB();
    	
 endmodule
 
+// test oneWord submodule
 module oneWordTB();
 	logic clk;
 	logic [31:0] temp, rcon, wordFourBefore, word;
@@ -96,6 +102,7 @@ module oneWordTB();
      		clk = 0; #5;
 	 end
 	
+	// inpt specific word, rcon, and wordFourbefore to check wave forms
 	initial
 	 begin
 	  temp = 32'ha0fafe17;

@@ -1,3 +1,8 @@
+// aesTB.sv
+// Max De Somma
+// mdesomma@g.hmc.edu
+// 10/27/2024
+
 /////////////////////////////////////////////
 // aes
 //   Top level module with SPI interface and SPI core
@@ -78,7 +83,7 @@ module aes_core(input  logic         clk,
                 input  logic [127:0] plaintext, 
                 output logic         done, 
                 output logic [127:0] cyphertext);
-
+    // connect all the different submodules
     logic firstRound = 1;
     logic [3:0] bufferCount, roundCount;
     logic [31:0] rcon;
@@ -93,15 +98,17 @@ module aes_core(input  logic         clk,
     addRoundKey rc1(prc, nextWordsKey,rc);
 	
 	always_ff @(posedge clk) begin
+        // on reset reset done, roundCount, bufferCount
         if (load) begin
           roundCount <= 0;
           bufferCount <= 0;
 	      done <= 0;
         end 
         else begin
-          // Increment bufferCount on every clock cycle if not loading
+          // Increment bufferCount on every clock cycle
           bufferCount <= bufferCount + 1;
 
+          // we know a round is over after 3 clock cycles
           if (bufferCount > 3) begin
             psb <= rc;
               bufferCount <= 0; // Reset bufferCount after using it
@@ -110,25 +117,28 @@ module aes_core(input  logic         clk,
             end
         end
 
-
+    // if its the beginning current key is set to input key
     if (roundCount == 0 & bufferCount == 0) begin
       currentKey <= key;
-	  psb <= st;
+	    psb <= st;
     end
 
+    // if its the end of cypher set cypher text to rc and done high
     if (roundCount == 9 && bufferCount == 2) begin
         cyphertext <= rc;
         done <= 1;
     end
 
+    // if its round 10 skip mixColumns
     if(roundCount < 9) begin
       pmc <= sr;
       prc <= mc;
     end
-    else begin
+    else begin // else set pre round key to shiftRows
       prc <= sr;
     end
 
+    // rcon logic
     if (roundCount == 0) rcon = 32'h01000000;
     if (roundCount == 1) rcon = 32'h02000000;
     if (roundCount == 2) rcon = 32'h04000000;
@@ -140,11 +150,6 @@ module aes_core(input  logic         clk,
     if (roundCount == 8) rcon = 32'h1b000000;
     if (roundCount == 9) rcon = 32'h36000000;
 end
-
-
-
-
-
     
 endmodule
 
@@ -292,6 +297,11 @@ module subByte(input logic [127:0] a, input logic clk,
 
 endmodule
 
+/////////////////////////////////////////////
+// generateNextWords
+//   takes currentWord and rcone and 
+//   calculates the nextWords for key expansion
+/////////////////////////////////////////////
 module generateNextWords(input clk, input logic [127:0] currentWords, input logic [31:0] rcon,
                           output logic [127:0] nextWords);
     logic [31:0] temp;
@@ -306,6 +316,11 @@ module generateNextWords(input clk, input logic [127:0] currentWords, input logi
    
 endmodule
 
+/////////////////////////////////////////////
+// generateNextWords
+//   takes a single word and the word[i-4]
+//   calculates the nextWord for key expansion
+/////////////////////////////////////////////
 module oneWord(input logic clk,
                 input logic [31:0] temp, rcon, wordFourBefore,
                 output logic [31:0] word);
